@@ -119,6 +119,9 @@ map <D-J> <C-W>j
 map <D-K> <C-W>k
 map <D-L> <C-W>l
 
+" Open a scratch buffer in a horizontal split
+map <D-F> :Sscratch<cr>
+
 " Case insensitive write/quit
 :command WQ wq
 :command Wq wq
