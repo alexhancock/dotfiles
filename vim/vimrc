@@ -1,0 +1,135 @@
+let pathogen = expand('~/dotfiles/vim/autoload/pathogen.vim')
+let vimtagged = expand('/local/vim/vimtagged.vim')
+let viminfo = expand('/local/vim/vim-info.vim')
+
+if filereadable(pathogen) | exe "source " . pathogen | endif
+if filereadable(vimtagged) | exe "source " . vimtagged | endif
+if filereadable(viminfo) | exe "source " . viminfo | endif
+
+call pathogen#infect('~/dotfiles/vim/bundle')
+
+map <Leader>l :TAGEval<CR>
+let g:vimtagged_output_height = 60
+
+syntax on
+filetype plugin indent on
+
+set encoding=utf-8
+set fileencoding=utf-8
+
+set laststatus=2
+set statusline+=%F
+
+" Font
+set gfn=Monaco_for_Powerline:h11
+
+" Statusline
+" powerline config
+set rtp+=~/dotfiles/vim/bundle/powerline/powerline/bindings/vim
+
+" Line numbers
+set number
+
+set backspace=2
+
+set clipboard+=unnamed  " use the clipboards of vim and win
+set paste               " Paste from a windows or from vim
+set go+=a               " Visual selection automatically copied to the clipboard
+
+" Tabs and spaces
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" This is it, man... only use HKJL
+map <Left>  <Nop>
+map <Right> <Nop>
+map <Up>    <Nop>
+map <Down>  <Nop>
+
+" Copy indent from current line when starting a new line.
+set smartindent
+set showmode
+set autoindent
+
+" GUI Options
+if has("gui_running")
+    set guioptions=egmt
+endif
+
+" Color
+colors distinguished
+
+" Command-T
+let g:CommandTMaxFiles=30000
+let g:CommandTMaxHeight=50
+
+augroup CommandTExtension
+    autocmd!
+    autocmd FocusGained * CommandTFlush
+    autocmd BufWritePost * CommandTFlush
+augroup END
+
+" NERDTree
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+map <Leader>n :NERDTreeToggle<CR>
+
+" Copy path to current file to system clipboard with leader+o
+map <Leader>o :let @*=expand("%:p")<CR>
+
+" Mapping of filetypes for syntax highlighting
+au BufNewFile,BufRead *.html set filetype=php
+au BufNewFile,BufRead *.json set ft=javascript
+au BufNewFile,BufRead *.jst set ft=html
+au BufNewFile,BufRead *.hjs set ft=html
+au BufNewFile,BufRead *.mu set ft=html
+au BufNewFile,BufRead *.hbs set ft=html
+au BufNewFile,BufRead *.less set ft=css
+
+" Syntastic 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_check_on_open=1
+
+let g:syntastic_mode_map = { 'mode': 'passive',
+                           \ 'passive_filetypes': ['javascript'] }
+                           
+" Key bindings
+" Command + [ or ] for block indentation
+vmap <D-]> >gv
+vmap <D-[> <gv
+
+" Enable virtualedit for visual block mode
+" (position cursor where characters don't actually exist, useful for copying a block beyond the end of lines/halfway through tabs)
+set virtualedit=block
+
+" Up and down 10 lines with shift j+k
+map <S-j> 10j
+map <S-k> 10k
+
+" Moving between buffers
+map <D-d> :split<CR>
+map <D-D> :vsplit<CR>
+
+map <D-H> <C-W>h
+map <D-J> <C-W>j
+map <D-K> <C-W>k
+map <D-L> <C-W>l
+
+" Case insensitive write/quit
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+
+" reload chrome canary's active tab with command-r
+map <D-r> :silent !osascript -e "tell application \"Google Chrome Canary\" to tell the active tab of its first window to reload"<CR><CR>
+
+command Collapse %s/\n/ /g
+
+" Swap
+:set directory=~/vimswap
+:call pathogen#helptags()
