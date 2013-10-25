@@ -63,15 +63,14 @@ endif
 " Color
 colors distinguished
 
-" Command-T
-let g:CommandTMaxFiles=30000
-let g:CommandTMaxHeight=50
+" ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
 
-augroup CommandTExtension
-    autocmd!
-    autocmd FocusGained * CommandTFlush
-    autocmd BufWritePost * CommandTFlush
-augroup END
+" a.vim
+map <Leader>a :A<CR>
+map <Leader>as :AS<CR>
+map <Leader>av :AV<CR>
 
 " NERDTree
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
