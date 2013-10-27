@@ -63,6 +63,9 @@ endif
 " Color
 colors distinguished
 
+" ctrlp
+let g:ctrlp_max_height = 25
+
 " NERDTree
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
