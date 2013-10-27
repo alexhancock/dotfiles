@@ -63,16 +63,6 @@ endif
 " Color
 colors distinguished
 
-" Command-T
-let g:CommandTMaxFiles=30000
-let g:CommandTMaxHeight=50
-
-augroup CommandTExtension
-    autocmd!
-    autocmd FocusGained * CommandTFlush
-    autocmd BufWritePost * CommandTFlush
-augroup END
-
 " NERDTree
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
