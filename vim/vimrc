@@ -78,7 +78,7 @@ map <Leader>o :let @*=expand("%:p")<CR>
 " Mapping of filetypes for syntax highlighting
 au BufNewFile,BufRead *.html set filetype=php
 au BufNewFile,BufRead *.json set ft=javascript
-au BufNewFile,BufRead *.jst set ft=html
+au BufNewFile,BufRead *.jst set filetype=jst
 au BufNewFile,BufRead *.hjs set ft=html
 au BufNewFile,BufRead *.mu set ft=html
 au BufNewFile,BufRead *.hbs set ft=html
