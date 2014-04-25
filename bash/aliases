@@ -10,6 +10,7 @@ alias ll="ls -l"
 alias pull="git svn rebase" 
 alias gti="git"
 alias gut="git"
+alias gulp="gulp --require coffee-script/register"
 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
