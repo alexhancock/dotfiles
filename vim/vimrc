@@ -8,9 +8,6 @@ if filereadable(viminfo) | exe "source " . viminfo | endif
 
 call pathogen#infect('~/dotfiles/vim/bundle')
 
-map <Leader>l :TAGEval<CR>
-let g:vimtagged_output_height = 60
-
 syntax on
 set showmatch
 filetype plugin indent on
