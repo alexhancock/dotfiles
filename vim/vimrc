@@ -19,7 +19,7 @@ set laststatus=2
 set statusline+=%F
 
 " Font
-set gfn=Monaco_for_Powerline:h11
+set gfn=Monaco_for_Powerline:h14
 
 " Statusline
 " powerline config
