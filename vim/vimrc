@@ -18,6 +18,8 @@ set fileencoding=utf-8
 set laststatus=2
 set statusline+=%F
 
+let mapleader = ","
+
 " Font
 set gfn=Monaco_for_Powerline:h14
 
@@ -98,6 +100,9 @@ vmap <D-[> <gv
 " Enable virtualedit for visual block mode
 " (position cursor where characters don't actually exist, useful for copying a block beyond the end of lines/halfway through tabs)
 set virtualedit=block
+
+" leader w to redistribute vertical splits
+map <Leader>w <C-W>=
 
 " Up and down 10 lines with shift j+k
 map <S-j> 10j
