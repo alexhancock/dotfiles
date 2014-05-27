@@ -69,10 +69,6 @@ let g:ctrlp_max_height=25
 
 " NERDTree
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
-
-" Copy path to current file to system clipboard with leader+o
-map <Leader>o :let @*=expand("%:p")<CR>
 
 " Mapping of filetypes for syntax highlighting
 au BufNewFile,BufRead *.html set filetype=php
@@ -101,8 +97,15 @@ vmap <D-[> <gv
 " (position cursor where characters don't actually exist, useful for copying a block beyond the end of lines/halfway through tabs)
 set virtualedit=block
 
-" leader w to redistribute vertical splits
+" leader-* mappings
+" leader-w - Redistribute vertical splits
 map <Leader>w <C-W>=
+" leader-e - Reload buffer contents from version on disk
+map <Leader>e :e<CR>
+" leader-o - Copy path to current file to system clipboard with leader+o
+map <Leader>o :let @*=expand("%:p")<CR>
+" leader-n - NERDTree
+map <Leader>n :NERDTreeToggle<CR>
 
 " Up and down 10 lines with shift j+k
 map <S-j> 10j
