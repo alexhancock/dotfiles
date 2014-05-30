@@ -1,9 +1,7 @@
 let pathogen = expand('~/dotfiles/vim/autoload/pathogen.vim')
-let vimtagged = expand('/local/vim/vimtagged.vim')
 let viminfo = expand('/local/vim/vim-info.vim')
 
 if filereadable(pathogen) | exe "source " . pathogen | endif
-if filereadable(vimtagged) | exe "source " . vimtagged | endif
 if filereadable(viminfo) | exe "source " . viminfo | endif
 
 call pathogen#infect('~/dotfiles/vim/bundle')
@@ -39,7 +37,6 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-
 
 if has("gui_running")
     set guioptions=egmt
@@ -80,11 +77,16 @@ noremap <Leader>o :let @*=expand("%:p")<CR>
 " leader-n - NERDTree
 noremap <Leader>n :NERDTreeToggle<CR>
 
+" leader-p - CtrlP
+noremap <Leader>t :CtrlP<CR>
+noremap <Leader>tc :CtrlPClearAllCaches<CR>
+
 " Up and down 10 lines with shift j+k
 noremap <S-j> 10j
 noremap <S-k> 10k
 
 noremap <C-z> :undo<CR>
+
 noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
@@ -98,9 +100,6 @@ noremap <C-H> <C-W>h
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
 noremap <C-L> <C-W>l
-
-" Open a scratch buffer in a horizontal split
-noremap <Leader>s :Sscratch<cr>
 
 " Case insensitive write/quit
 :command WQ wq
@@ -126,7 +125,6 @@ au BufNewFile,BufRead *.hjs set ft=html
 au BufNewFile,BufRead *.mu set ft=html
 au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.less set ft=css
-
 
 " Swap
 :set directory=~/vimswap
