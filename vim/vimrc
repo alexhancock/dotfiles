@@ -29,7 +29,6 @@ set rtp+=~/dotfiles/vim/bundle/powerline/powerline/bindings/vim
 set number
 set backspace=2
 set clipboard+=unnamed  " use the clipboards of vim and osx
-set paste               " Paste from osx or from vim
 set go+=a               " visual selection automatically copied to the clipboard
 " Tabs and spaces
 set nowrap
@@ -64,8 +63,8 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " Key bindings
 
 " Indent blocks of text
-vnoremap <C-]> >gv
-vnoremap <C-[> <gv
+vnoremap <Tab> >gv
+
 vnoremap <Esc> <C-c>
 
 " leader-w - Redistribute vertical splits
