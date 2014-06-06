@@ -1,8 +1,6 @@
 [user]
     name = Alex Hancock
     email = alex@alexhancock.com
-[reviewboard]
-    url = https://scm.tagged.com/reviewboard
 [alias]
     c = commit -am
     co = checkout
@@ -30,7 +28,3 @@
     log = true
 [rerere]
     enabled = 1
-[github "github.tagged.com"]
-	user = ahancock
-[hub]
-	host = github.tagged.com
