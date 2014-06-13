@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+
+#
+# rewrite coffee-jshint output to be amenable to vim errorformats I know how
+# to write
+#
+
+import subprocess
+import sys
+import re
+
+globals = """
+$
+require
+setTimeout
+setInterval
+window
+document
+module
+console
+"""
+
+globals_str = ','.join(g.strip() for g in globals.strip().splitlines()
+                       if g.strip())
+
+args = ["coffee-jshint", "-g", globals_str] + sys.argv[1:]
+
+proc = subprocess.Popen(args, shell=False, stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE)
+
+stdout, stderr = proc.communicate()
+
+nextIsFile = False
+filename = None
+for line in stdout.splitlines():
+    if nextIsFile:
+        filename = line
+        nextIsFile = False
+    elif re.match("-----", line):
+        nextIsFile = True
+    elif line.strip():
+        print "%s:%s" % (filename, line)

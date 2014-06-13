@@ -1,14 +1,11 @@
 let pathogen = expand('~/dotfiles/vim/autoload/pathogen.vim')
-let viminfo = expand('/local/vim/vim-info.vim')
-
 if filereadable(pathogen) | exe "source " . pathogen | endif
-if filereadable(viminfo) | exe "source " . viminfo | endif
-
 call pathogen#infect('~/dotfiles/vim/bundle')
 
 syntax on
-let mapleader = ","
 filetype plugin indent on
+
+let mapleader = ","
 
 " Copy indent from current line when starting a new line.
 set smartindent
@@ -25,11 +22,13 @@ set gfn=Monaco_for_Powerline:h14
 
 " powerline config
 set rtp+=~/dotfiles/vim/bundle/powerline/powerline/bindings/vim
+
 " Line numbers
 set number
 set backspace=2
 set clipboard+=unnamed  " use the clipboards of vim and osx
 set go+=a               " visual selection automatically copied to the clipboard
+
 " Tabs and spaces
 set nowrap
 set tabstop=2
@@ -57,9 +56,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_check_on_open=1
+let g:syntastic_coffee_checkers=['coffee', 'coffeejshint']
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': ['javascript'] }
-                           
+
 " Key bindings
 
 " Indent blocks of text
