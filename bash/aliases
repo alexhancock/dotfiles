@@ -1,3 +1,8 @@
+if [ -f ~/.extras ]
+then
+  source ~/.extras
+fi
+
 # Common Misspellings
 alias clerar="clear"
 alias cleare="clear"
