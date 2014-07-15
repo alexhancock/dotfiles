@@ -36,6 +36,8 @@ alias flush="dscacheutil -flushcache"
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 
+alias tcpwatch="sudo tcpdump -n -v -S -i en0 tcp"
+
 # OS X has no `md5sum`, so use `md5` as a fallback
 type -t md5sum > /dev/null || alias md5sum="md5"
 

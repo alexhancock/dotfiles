@@ -11,6 +11,16 @@ import re
 
 globals = """
 $
+sinon
+chai
+it
+Buffer
+process
+__dirname
+define
+beforeEach
+afterEach
+describe
 require
 setTimeout
 setInterval
