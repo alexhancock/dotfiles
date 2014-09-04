@@ -1,30 +1,34 @@
 [user]
-    name = Alex Hancock
-    email = alex@alexhancock.com
+  name = Alex Hancock
+  email = alex@alexhancock.com
 [alias]
-    c = commit -am
-    co = checkout
-    up = pull
-    br = branch
-    p = push
-    st = status -s
-    rc = rebase --continue
-    prune-all = !git remote | xargs -n 1 git remote prune
-    lgo = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-    lg = log --graph --decorate --date=local
-    corh = !sh -c 'git fetch origin && git co $1 && git reset --hard origin/$1' -
-    ir = !sh -c 'git rebase -i HEAD~$0'
-    slam = !sh -c 'git push origin $0 -f'
-    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+  c = commit -am
+  co = checkout
+  up = pull
+  br = branch
+  p = push
+  st = status -s
+  rc = rebase --continue
+  prune-all = !git remote | xargs -n 1 git remote prune
+  lgo = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  lg = log --graph --decorate --date=local
+  corh = !sh -c 'git fetch origin && git co $1 && git reset --hard origin/$1' -
+  ir = !sh -c 'git rebase -i HEAD~$0'
+  slam = !sh -c 'git push origin $0 -f'
+  graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
 [core]
-    excludesfile = ~/.gitignore
-    editor = vim
-    ignorecase = true
+  excludesfile = ~/.gitignore
+  editor = vim
+  ignorecase = true
 [color]
-    status = auto
-    branch = auto
-    diff = auto
+  status = auto
+  branch = auto
+  diff = auto
 [merge]
-    log = true
+  log = true
 [rerere]
-    enabled = 1
+  enabled = 1
+[github]
+  user = alexhancock
+[include]
+  path = ~/Dropbox/work/.gitconfig_extras
