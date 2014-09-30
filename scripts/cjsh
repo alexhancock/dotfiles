@@ -11,6 +11,12 @@ import re
 
 globals = """
 $
+_
+Meteor
+React
+Backbone
+Stripe
+jQuery
 Storage
 sinon
 chai
