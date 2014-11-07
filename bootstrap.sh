@@ -11,9 +11,6 @@ function doIt() {
 
     cd ~/dotfiles/
 
-    # Build Command-T
-    cd ~/dotfiles/vim/bundle/command-t/ruby/command-t/ && ruby extconf.rb && make
-
     cd ~/dotfiles/vim/bundle/powerline/
     pip install --user git+git://github.com/Lokaltog/powerline
     sudo ./setup.py build && sudo ./setup.py install
@@ -30,6 +27,8 @@ function doIt() {
     rm -f ~/.zshrc && ln -s ~/dotfiles/modules/oh-my-zsh/templates/zshrc ~/.zshrc &&
     rm -f ~/.oh-my-zsh && ln -s ~/dotfiles/modules/oh-my-zsh ~/.oh-my-zsh &&
     rm -f ~/.vim && ln -s ~/dotfiles/vim ~/.vim
+
+    mkdir ~/vimswap
 
     cd ~/dotfiles/
 }
