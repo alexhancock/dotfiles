@@ -61,8 +61,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_check_on_open=1
 let g:syntastic_coffee_checkers=['coffee', 'coffeejshint']
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'passive_filetypes': ['javascript'] }
+let g:syntastic_mode_map = { 'mode': 'active' }
 
 " Key bindings
 

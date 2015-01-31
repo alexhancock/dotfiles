@@ -14,6 +14,7 @@ $
 _
 Meteor
 React
+casper
 Backbone
 Stripe
 jQuery
@@ -21,6 +22,7 @@ Storage
 sinon
 chai
 it
+ga
 Buffer
 process
 __dirname
@@ -31,6 +33,8 @@ describe
 require
 setTimeout
 setInterval
+clearTimeout
+clearInterval
 window
 document
 module
