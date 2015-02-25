@@ -17,6 +17,11 @@ alias gti="git"
 alias gut="git"
 alias gulp="gulp --require coffee-script/register"
 
+# Launch chrome with specific profile dir
+chrome() {
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=$1
+}
+
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 # Launch a selenium testing server
