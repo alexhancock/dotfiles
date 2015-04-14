@@ -3,12 +3,11 @@
 function install_deps() {
     # Install Homebrew
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
-    brew install vim node python htop caskroom/cask/brew-cask
-
-    brew cask install google-chrome google-drive dropbox
-    brew cask install iterm2
-    brew cask install alfred
-    brew cask install sizeup
+    # Install cli tools
+    brew install vim node python htop postgres redis caskroom/cask/brew-cask
+    pip install awscli
+    # Install apps
+    brew cask install google-chrome google-drive dropbox 1password iterm2 alfred sizeup vlc evernote
 }
 
 function doIt() {
