@@ -1,9 +1,14 @@
 #!/bin/sh
 
 function install_deps() {
-    # Assume Git and Ruby
     # Install Homebrew
-    curl -fsSkL raw.github.com/mxcl/homebrew/go | ruby
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
+    brew install vim node python htop caskroom/cask/brew-cask
+
+    brew cask install google-chrome google-drive dropbox
+    brew cask install iterm2
+    brew cask install alfred
+    brew cask install sizeup
 }
 
 function doIt() {
