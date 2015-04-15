@@ -7,7 +7,7 @@ function install_deps() {
     brew install vim node python htop postgres redis speedtest_cli caskroom/cask/brew-cask
     pip install awscli
     # Install apps
-    brew cask install google-chrome google-drive dropbox 1password iterm2 alfred sizeup vlc evernote
+    brew cask install google-chrome google-drive dropbox charles 1password iterm2 alfred sizeup vlc evernote
 }
 
 function doIt() {
