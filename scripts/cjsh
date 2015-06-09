@@ -13,6 +13,8 @@ globals = """
 $
 r$
 _
+cxApi
+navigator
 Meteor
 Raygun
 Gator
