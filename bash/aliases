@@ -54,3 +54,5 @@ alias fs="stat -f \"%z bytes\""
 
 # List Dirs Only
 alias lsd='ls -l | grep "^d"'
+
+alias decode_id='coffee ~/dotfiles/scripts/decode_id.coffee $1'
