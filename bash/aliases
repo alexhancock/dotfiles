@@ -3,6 +3,8 @@ then
   source ~/.extras
 fi
 
+for f in ~/dotfiles/extra_scripts/*; do source $f; done
+
 # Common Misspellings
 alias clerar="clear"
 alias cleare="clear"
