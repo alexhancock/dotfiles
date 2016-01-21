@@ -61,6 +61,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_check_on_open=1
 let g:syntastic_coffee_checkers=['coffee', 'coffeejshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = { 'mode': 'active' }
 
 " Key bindings
@@ -127,6 +128,7 @@ au BufNewFile,BufRead *.hjs set ft=html
 au BufNewFile,BufRead *.mu set ft=html
 au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.less set ft=css
+au BufNewFile,BufRead *.cjsx set ft=coffee
 
 " Swap
 :set directory=~/vimswap
