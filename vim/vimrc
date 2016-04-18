@@ -43,6 +43,9 @@ colors distinguished
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 let g:ctrlp_max_height=25
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  './node_modules',
+\ }
 
 hi CursorColumn ctermbg=Blue
 imap <S-Up> <Esc>:set cuc!<CR>i
