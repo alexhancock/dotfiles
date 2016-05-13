@@ -38,3 +38,5 @@ for f in ~/dotfiles/extra_scripts/*; do
 	[ -r $f ] && source $f;
 done;
 unset f
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
