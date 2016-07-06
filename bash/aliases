@@ -11,6 +11,7 @@ alias pull="git svn rebase"
 alias gti="git"
 alias gut="git"
 alias gulp="gulp --require coffee-script/register"
+alias npmglobals="npm ls --global --depth 0"
 
 # Launch chrome with specific profile dir
 chrome() {
