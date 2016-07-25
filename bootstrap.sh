@@ -15,11 +15,6 @@ function doIt() {
 
     cd ~/dotfiles/
 
-    cd ~/dotfiles/vim/bundle/powerline/
-    pip install --user git+git://github.com/Lokaltog/powerline
-    sudo ./setup.py build && sudo ./setup.py install
-    cp ~/dotfiles/vim/fonts/Monaco+for+Powerline.otf ~/Library/fonts/
-
     # Setup proper paths to all the resources
     rm -f ~/.vimrc && ln -s ~/dotfiles/vim/vimrc ~/.vimrc &&
     rm -f ~/.gvimrc && ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc &&
@@ -28,8 +23,6 @@ function doIt() {
     rm -f ~/.bashrc && ln -s ~/dotfiles/bash/bashrc ~/.bashrc &&
     rm -f ~/.bash_prompt && ln -s ~/dotfiles/bash/bash_prompt ~/.bash_prompt && 
     rm -f ~/.gitconfig && ln -s ~/dotfiles/gitconfig ~/.gitconfig &&
-    rm -f ~/.zshrc && ln -s ~/dotfiles/modules/oh-my-zsh/templates/zshrc ~/.zshrc &&
-    rm -f ~/.oh-my-zsh && ln -s ~/dotfiles/modules/oh-my-zsh ~/.oh-my-zsh &&
     rm -f ~/.vim && ln -s ~/dotfiles/vim ~/.vim
 
     mkdir ~/vimswap
