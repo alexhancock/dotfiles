@@ -20,8 +20,6 @@ function doIt() {
     rm -f ~/.gvimrc && ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc &&
     rm -f ~/.aliases && ln -s ~/dotfiles/bash/aliases ~/.aliases &&
     rm -f ~/.bash_local && ln -s ~/dotfiles/bash/bash_local ~/.bash_local &&
-    rm -f ~/.bash_profile && ln -s ~/dotfiles/bash/bash_profile ~/.bash_profile &&
-    rm -f ~/.bashrc && ln -s ~/dotfiles/bash/bashrc ~/.bashrc &&
     rm -f ~/.bash_prompt && ln -s ~/dotfiles/bash/bash_prompt ~/.bash_prompt && 
     rm -f ~/.gitconfig && ln -s ~/dotfiles/gitconfig ~/.gitconfig &&
     rm -f ~/.vim && ln -s ~/dotfiles/vim ~/.vim
@@ -29,6 +27,8 @@ function doIt() {
     mkdir ~/vimswap
 
     cd ~/dotfiles/
+
+    echo "SETUP COMPLETE - remember to source the new ~/.bash_local file from somewhere"
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
