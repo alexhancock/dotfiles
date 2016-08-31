@@ -59,3 +59,5 @@ alias decode_id='coffee ~/dotfiles/scripts/decode_id.coffee $1'
 alias dirheap='du -a . | sort -nr | head'
 
 alias procport='lsof -i $@'
+
+alias conncheck='ping 8.8.8.8'
