@@ -13,6 +13,13 @@ alias gut="git"
 alias gulp="gulp --require coffee-script/register"
 alias npmglobals="npm ls --global --depth 0"
 
+decafprocess() {
+  bulk-decaffeinate -f $1.coffee convert
+  bulk-decaffeinate clean
+  vim $1.js
+  git commit -am "[cleanup] manual fixes after decaffing $1"
+}
+
 # Launch chrome with specific profile dir
 chrome() {
   /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=$1
