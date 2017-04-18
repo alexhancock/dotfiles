@@ -59,6 +59,7 @@ alias fs="stat -f \"%z bytes\""
 alias lsd='ls -l | grep "^d"'
 
 alias weather='ansiweather -u imperial -l $1'
+
 alias forecast='ansiweather -u imperial -F -l $1'
 
 alias decode_id='coffee ~/dotfiles/scripts/decode_id.coffee $1'
