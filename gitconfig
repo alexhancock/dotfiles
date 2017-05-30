@@ -34,3 +34,5 @@
   path = ~/Dropbox/work/.gitconfig_extras
 [ghi]
   token = !security find-internet-password -a alexhancock -s github.com -l 'ghi token' -w
+[url "https://github.com/"]
+	insteadOf = git://github.com/
