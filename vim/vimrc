@@ -46,6 +46,11 @@ let g:ctrlp_max_height=25
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'node_modules\|tmp\|vendor',
 \ }
+let g:ctrlp_cmd = ':CtrlPCurWD'
+
+" set ctrlp root with nerdtree's current root
+let g:NERDTreeChDirMode       = 2
+let g:ctrlp_working_path_mode = 'rw'
 
 hi CursorColumn ctermbg=Blue
 imap <S-Up> <Esc>:set cuc!<CR>i

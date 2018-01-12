@@ -11,8 +11,8 @@ Vim's diff handling capabilities to stage a subset of the file's
 changes.
 
 Bring up the output of `git status` with `:Gstatus`.  Press `-` to
-`add`/`reset` a file's changes, or `p` to `add`/`reset` `--patch` that
-mofo.  And guess what `:Gcommit` does!
+`add`/`reset` a file's changes, or `p` to `add`/`reset` `--patch`.  And guess
+what `:Gcommit` does!
 
 `:Gblame` brings up an interactive vertical split with `git blame`
 output.  Press enter on a line to edit the commit where the line
@@ -20,7 +20,7 @@ changed, or `o` to open it in a split.  When you're done, use `:Gedit`
 in the historic buffer to go back to the work tree version.
 
 `:Gmove` does a `git mv` on a file and simultaneously renames the
-buffer.  `:Gremove` does a `git rm` on a file and simultaneously deletes
+buffer.  `:Gdelete` does a `git rm` on a file and simultaneously deletes
 the buffer.
 
 Use `:Ggrep` to search the work tree (or any arbitrary commit) with
@@ -35,9 +35,15 @@ and you never get any warnings about the file changing outside Vim.
 making it like `git add` when called from a work tree file and like
 `git checkout` when called from the index or a blob in history.
 
-Use `:Gbrowse` to open the current file on GitHub, with optional line
-range (try it in visual mode!).  If your current repository isn't on
-GitHub, `git instaweb` will be spun up instead.
+Use `:Gbrowse` to open the current file on the web front-end of your favorite
+hosting provider, with optional line range (try it in visual mode!).  Built-in
+support is provided for `git instaweb`, and plugins are available for popular
+providers such as [GitHub][rhubarb.vim], [GitLab][fugitive-gitlab.vim], and
+[Bitbucket][fubitive.vim].
+
+[rhubarb.vim]: https://github.com/tpope/vim-rhubarb
+[fugitive-gitlab.vim]: https://github.com/shumphrey/fugitive-gitlab.vim
+[fubitive.vim]: https://github.com/tommcdo/vim-fubitive
 
 Add `%{fugitive#statusline()}` to `'statusline'` to get an indicator
 with the current branch in (surprise!) your statusline.
@@ -55,15 +61,13 @@ and `Git!` to open the output of a command in a temp file.
 
 ## Installation
 
-If you don't have a preferred installation method, I recommend
-installing [pathogen.vim](https://github.com/tpope/vim-pathogen), and
-then simply copy and paste:
+If you don't have a preferred installation method, one option is to install
+[pathogen.vim](https://github.com/tpope/vim-pathogen), and then copy
+and paste:
 
     cd ~/.vim/bundle
-    git clone git://github.com/tpope/vim-fugitive.git
-
-Once help tags have been generated, you can view the manual with
-`:help fugitive`.
+    git clone https://github.com/tpope/vim-fugitive.git
+    vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
 If your Vim version is below 7.2, I recommend also installing
 [vim-git](https://github.com/tpope/vim-git) for syntax highlighting and
@@ -86,7 +90,7 @@ directory.  Edit a file from the repository.
 
 `:Gbrowse` delegates to `git web--browse`, which is less than perfect
 when it comes to finding the right browser.  You can tell it the correct
-browser to use with `git config --global web.browser ...`.  On OS X, for
+browser to use with `git config --global web.browser ...`.  On macOS, for
 example, you might want to set this to `open`.  See `git web--browse --help`
 for details.
 
