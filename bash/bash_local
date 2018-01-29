@@ -33,3 +33,6 @@ for f in ~/dotfiles/extra_scripts/*; do
 	[ -r $f ] && source $f;
 done;
 unset f
+
+# PATH modifications
+export PATH="$PATH:./node_modules/.bin/"
