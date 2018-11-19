@@ -3,6 +3,7 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 # init scripts
+. ~/dotfiles/bash/bash_prompt
 . ~/dotfiles/scripts/z.sh
 . ~/dotfiles/scripts/git-completion.bash
 
