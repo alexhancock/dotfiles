@@ -127,13 +127,7 @@ noremap <Down>  <Nop>
 
 " Mapping of filetypes for syntax highlighting
 au BufNewFile,BufRead *.html set filetype=php
-au BufNewFile,BufRead *.json set ft=javascript
-au BufNewFile,BufRead *.jst set filetype=jst
-au BufNewFile,BufRead *.hjs set ft=html
 au BufNewFile,BufRead *.hbs set ft=handlebars
-au BufNewFile,BufRead *.mu set ft=html
-au BufNewFile,BufRead *.less set ft=css
-au BufNewFile,BufRead *.cjsx set ft=coffee
 
 " Swap
 :set directory=~/vimswap
