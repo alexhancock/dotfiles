@@ -60,8 +60,7 @@ nmap <S-Up> :set cuc!<CR>
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 
 " Ale
-let g:ale_fixers = ['prettier', 'eslint']
-let g:ale_fix_on_save = 1
+let g:ale_fixers = ['eslint']
 
 " typescript
 let g:tsuquyomi_disable_quickfix = 1
@@ -127,7 +126,6 @@ noremap <Down>  <Nop>
 
 " Mapping of filetypes for syntax highlighting
 au BufNewFile,BufRead *.html set filetype=php
-au BufNewFile,BufRead *.hbs set ft=handlebars
 
 " Swap
 :set directory=~/vimswap

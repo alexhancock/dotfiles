@@ -12,6 +12,7 @@ alias gti="git"
 alias gut="git"
 alias gulp="gulp --require coffee-script/register"
 alias npmglobals="npm ls --global --depth 0"
+alias removelocalbranches="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
 
 decafprocess() {
   bulk-decaffeinate -f $1.coffee convert
