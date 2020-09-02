@@ -62,12 +62,6 @@ let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 " Ale
 let g:ale_fixers = ['eslint']
 
-" typescript
-let g:tsuquyomi_disable_quickfix = 1
-" TODO need to find ale equivalent if I continue to want to use ale and
-" typescript
-" let g:syntastic_typescript_checkers = ['tsuquyomi']
-
 " Key bindings
 
 " Indent blocks of text
