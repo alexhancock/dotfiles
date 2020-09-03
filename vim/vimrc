@@ -1,7 +1,3 @@
-let pathogen = expand('~/dotfiles/vim/autoload/pathogen.vim')
-if filereadable(pathogen) | exe "source " . pathogen | endif
-call pathogen#infect('~/dotfiles/vim/bundle')
-
 syntax on
 filetype plugin indent on
 
@@ -123,5 +119,3 @@ au BufNewFile,BufRead *.html set filetype=php
 
 " Swap
 :set directory=~/vimswap
-
-:call pathogen#helptags()
