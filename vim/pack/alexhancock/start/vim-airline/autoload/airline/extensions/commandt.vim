@@ -1,5 +1,8 @@
-" MIT License. Copyright (c) 2013-2016 Bailey Ling.
+" MIT License. Copyright (c) 2013-2020 Bailey Ling et al.
+" Plugin: https://github.com/wincent/command-t
 " vim: et ts=2 sts=2 sw=2
+
+scriptencoding utf-8
 
 if !get(g:, 'command_t_loaded', 0)
   finish
