@@ -74,3 +74,5 @@ alias dirheap='du -a . | sort -nr | head'
 alias procport='lsof -i $@'
 
 alias conncheck='ping 8.8.8.8'
+
+alias ki='bash ~/dotfiles/scripts/ki/bin/ki.sh'
