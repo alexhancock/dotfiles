@@ -30,6 +30,14 @@ stail() {
   tail -f ~/Development/logs/development/$1.log
 }
 
+procPort() {
+  lsof -i :$1
+}
+
+killProc() {
+  kill -9 $(lsof -t -i :$1)
+}
+
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 # Launch a selenium testing server
@@ -71,7 +79,7 @@ alias decode_id='coffee ~/dotfiles/scripts/decode_id.coffee $1'
 
 alias dirheap='du -a . | sort -nr | head'
 
-alias procport='lsof -i $@'
+alias killproc='kill -9 $(lsof -t -i :$1)'
 
 alias conncheck='ping 8.8.8.8'
 
