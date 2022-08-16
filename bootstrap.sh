@@ -1,15 +1,6 @@
 #!/bin/sh
 
-function install_deps() {
-    # Install Homebrew
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
-    # Install cli tools
-    brew install vim node python htop speedtest_cli caskroom/cask/brew-cask
-}
-
 function doIt() {
-    install_deps;
-
     cd ~/dotfiles/
 
     # Setup proper paths to all the resources
