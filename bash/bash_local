@@ -35,6 +35,3 @@ unset f
 
 # PATH modifications
 export PATH="$PATH:./node_modules/.bin/"
-
-# Certs
-export NODE_EXTRA_CA_CERTS=/etc/openssl/cert.pem
