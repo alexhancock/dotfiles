@@ -35,3 +35,5 @@ unset f
 
 # PATH modifications
 export PATH="$PATH:./node_modules/.bin/"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
