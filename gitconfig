@@ -1,6 +1,6 @@
 [user]
   name = Alex Hancock
-  email = alexhancock@squareup.com
+  email = alexhancock@block.xyz
 [alias]
   c = commit -am
   co = checkout
